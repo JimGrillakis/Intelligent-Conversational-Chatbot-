@@ -89,13 +89,13 @@ def Ask(q):
     #   for i, res in enumerate(results):
     #       print("update: ", i, res["file_source"], res["distance"], res["text"])
 
-    for i, contract in enumerate(os.listdir(contracts_path)):
+    for i, pdf in enumerate(os.listdir(contracts_path)):
 
         qr = []
 
-        if contract != ".DS_Store":
+        if pdf != ".DS_Store":
 
-            print("\nContract Name: ", i, contract)
+            print("\nContract Name: ", i, pdf)
 
             
             for j, entries in enumerate(results):
@@ -105,7 +105,7 @@ def Ask(q):
                     # it handles difference in windows file formats vs. mac / linux
                     library_fn = library_fn.split(os.sep)[-1]
 
-                if library_fn == contract:
+                if library_fn == pdf:
                     print("Top Retrieval: ", j, entries["distance"], entries["text"])
                     qr.append(entries)
 
@@ -155,13 +155,13 @@ def Ask2(q,New_library,New_contracts_path):
     #   for i, res in enumerate(results):
     #       print("update: ", i, res["file_source"], res["distance"], res["text"])
 
-    for i, contract in enumerate(os.listdir(New_contracts_path)):
+    for i, pdf in enumerate(os.listdir(New_contracts_path)):
 
         qr = []
 
-        if contract != ".DS_Store":
+        if pdf != ".DS_Store":
 
-            print("\nContract Name: ", i, contract)
+            print("\nContract Name: ", i, pdf)
 
             
             for j, entries in enumerate(results):
@@ -171,7 +171,7 @@ def Ask2(q,New_library,New_contracts_path):
                     # it handles difference in windows file formats vs. mac / linux
                     library_fn = library_fn.split(os.sep)[-1]
 
-                if library_fn == contract:
+                if library_fn == pdf:
                     print("Top Retrieval: ", j, entries["distance"], entries["text"])
                     qr.append(entries)
 
@@ -220,13 +220,13 @@ def Ask3(q,llm_model_name):
     #   for i, res in enumerate(results):
     #       print("update: ", i, res["file_source"], res["distance"], res["text"])
 
-    for i, contract in enumerate(os.listdir(contracts_path)):
+    for i, pdf in enumerate(os.listdir(contracts_path)):
 
         qr = []
 
-        if contract != ".DS_Store":
+        if pdf != ".DS_Store":
 
-            print("\nContract Name: ", i, contract)
+            print("\nContract Name: ", i, pdf)
 
            
             for j, entries in enumerate(results):
@@ -236,7 +236,7 @@ def Ask3(q,llm_model_name):
                     # it handles difference in windows file formats vs. mac / linux
                     library_fn = library_fn.split(os.sep)[-1]
 
-                if library_fn == contract:
+                if library_fn == pdf:
                     print("Top Retrieval: ", j, entries["distance"], entries["text"])
                     qr.append(entries)
 
