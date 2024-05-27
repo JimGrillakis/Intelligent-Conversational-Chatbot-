@@ -26,7 +26,7 @@ vector_db = "faiss"
 # pick any name for the library
 library_name = "example5_library"
 
-example_models = ["llmware/bling-1b-0.1", "llmware/bling-tiny-llama-v0", "llmware/dragon-yi-6b-gguf"]
+example_models = ["llmware/bling-1b-0.1", "llmware/bling-tiny-llama-v0", "llmware/dragon-yi-6b-gguf"]#Yoy can use other models too, thats just an example!
 
 
 llm_model_name = example_models[2]
@@ -49,8 +49,8 @@ library = Library().create_new_library(library_name)
 
 print ("update: Step 2 - Get Files")
 
-sample_files_path = "/Users/jimgrillakis/Documents/llm/data"
-contracts_path = os.path.join(sample_files_path, "Harvard_Handbook")
+sample_files_path = "PATH"
+contracts_path = os.path.join(sample_files_path, "FOLDER_NAME")
 
 
 print("update: Step 3 - Parsing and Text Indexing Files")
